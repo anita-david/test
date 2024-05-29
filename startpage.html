@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="questions.css">
+    <script src="questions.js"></script>
+  </head>
+  <body class="body">
+
+    <div id="start">
+    <div class="header">
+    <p>You have 5 minutes to answer the questions provided</p>
+    <p>Click the start button to begin</p>
+    </div>
+    <div>
+      <button onclick=" startQuiz()
+        document.getElementById('q-one').style['display'] = 'block';
+        document.getElementById('start').style['display'] = 'none'
+        " class="start-button">Start</button>
+    </div>
+    </div>
+    <div id="timer" style="display: none;">05:00
+    <p class="text">MINUTES SECONDS</p></div>
+    <div id="q-one" style="display:none">
+    <div id="question-container" >
+      <p id="question" class="question-one">1. What is the name of the current President of Nigeria?</p>
+      <button onclick="saveSelection(1, 'Muhammadu Buhari');" class="option">Muhammadu Buhari</button><br>
+      <button onclick="saveSelection(1, 'Bola Ahmed Tinubu');" class="option">Bola Ahmed Tinubu</button><br>
+      <button onclick="saveSelection(1, 'Olusegun Obasanjo');" class="option">Olusegun Obasanjo</button><br>
+      <button onclick="saveSelection(1, 'Goodluck Jonathan');" class="option">Goodluck Jonathan</button>
+    </div>
+    <div>
+      <button onclick="
+      document.getElementById('q-two').style['display'] = 'block';
+      document.getElementById('q-one').style['display'] = 'none'
+      " class="next-button">Next</button>
+    </div>
+  </div>
+
+    <div id="q-two" style="display:none">
+      <div id="question-container">
+        <p id="question" class="question-one">2. Which Nigerian state has the largest population according to the most recent census?</p>
+        <button onclick="saveSelection(2, 'Lagos');" class="option">Lagos</button><br>
+        <button onclick="saveSelection(2, 'Kano');" class="option">Kano</button><br>
+        <button onclick="saveSelection(2, 'Rivers');" class="option">Rivers</button><br>
+        <button onclick="saveSelection(2, 'Kaduna');" class="option">Kaduna</button>
+      </div>
+      <div>
+        <button onclick="
+        document.getElementById('q-one').style['display'] = 'block';
+        document.getElementById('q-two').style['display'] = 'none'
+        " class="back-button">Back</button>
+        <button onclick="
+        document.getElementById('q-three').style['display'] = 'block';
+        document.getElementById('q-two').style['display'] = 'none'
+        " class="next-button">Next</button>
+      </div></div>
+
+
+    <div id="q-three" style="display:none"> 
+    <div>
+      <p class="question-one">3. Nigeria recently signed an agreement with a neighboring country to promote <br>cross-border trade. Which country was it?</p>
+      <button onclick="saveSelection(3, 'Benin');" class="option">Benin</button><br>
+      <button onclick="saveSelection(3, 'Ghana');" class="option">Ghana</button><br>
+      <button onclick="saveSelection(3, 'Cameroon');" class="option">Cameroon</button><br>
+      <button onclick="saveSelection(3, 'Chad');" class="option">Chad</button>
+    </div>
+    <div>
+      <button onclick="
+      document.getElementById('q-two').style['display'] = 'block';
+      document.getElementById('q-three').style['display'] = 'none'
+      " class="back-button">Back</button>
+      <button onclick="
+      document.getElementById('q-four').style['display'] = 'block';
+      document.getElementById('q-three').style['display'] = 'none'
+      " class="next-button">Next</button>
+    </div></div>
+
+
+    <div id="q-four" style="display:none">
+      <div>
+        <p class="question-one">4. What is the name of Nigeria's National Security Advisor as of 2023?</p>
+        <button onclick="saveSelection(4, 'Babagana Monguno');" class="option">Babagana Monguno</button><br>
+        <button onclick="saveSelection(4, 'Nuhu Ribadu');" class="option">Nuhu Ribadu</button><br>
+        <button onclick="saveSelection(4, 'Aliyu Gusau');" class="option">Aliyu Gusau</button><br>
+        <button onclick="saveSelection(4, 'Mohammed Bello');" class="option">Mohammed Bello</button>
+      </div>
+      <div>
+        <button onclick="
+        document.getElementById('q-three').style['display'] = 'block';
+        document.getElementById('q-four').style['display'] = 'none'
+        " class="back-button">Back</button>
+        <button onclick="
+        document.getElementById('q-five').style['display'] = 'block';
+        document.getElementById('q-four').style['display'] = 'none'
+        " class="next-button">Next</button>
+      </div>
+  </div>
+
+
+    <div id="q-five" style="display:none">
+      <div>
+        <p class="question-one">5. Which Nigerian author recently won a prestigious international literary award?</p>
+        <button onclick="saveSelection(5, 'Chimamanda Ngozi Adichie');" class="option">Chimamanda Ngozi Adichie</button><br>
+        <button onclick="saveSelection(5, 'Wole Soyinka');" class="option">Wole Soyinka</button><br>
+        <button onclick="saveSelection(5, 'Chigozie Obioma');" class="option">Chigozie Obioma</button><br>
+        <button onclick="saveSelection(5, 'Sefi Atta');" class="option">Sefi Atta</button>
+      </div>
+      <div>
+        <button onclick="
+        document.getElementById('q-four').style['display'] = 'block';
+        document.getElementById('q-five').style['display'] = 'none'
+        " class="back-button">Back</button>
+        <button onclick="
+        document.getElementById('q-six').style['display'] = 'block';
+        document.getElementById('q-five').style['display'] = 'none'
+        " class="next-button">Next</button>
+      </div></div>
+
+
+    <div id="q-six" style="display:none">
+      <div>
+        <p class="question-one">6. Nigeria's National Identification Number (NIN) is managed by which<br> government agency?</p>
+        <button onclick="saveSelection(6, 'National Identity Management Commission (NIMC)');" class="option">National Identity Management Commission (NIMC)</button><br>
+        <button onclick="saveSelection(6, 'Nigerian Immigration Service (NIS)');" class="option">Nigerian Immigration Service (NIS)</button><br>
+        <button onclick="saveSelection(6, 'National Population Commission (NPC)');" class="option">National Population Commission (NPC)</button><br>
+        <button onclick="saveSelection(6, 'Federal Road Safety Corps (FRSC)');" class="option">Federal Road Safety Corps (FRSC)</button>
+      </div>
+      <div>
+        <button onclick="
+        document.getElementById('q-five').style['display'] = 'block';
+        document.getElementById('q-six').style['display'] = 'none'
+        "  class="back-button">Back</button>
+        <button onclick="
+        document.getElementById('q-seven').style['display'] = 'block';
+        document.getElementById('q-six').style['display'] = 'none'
+        "  class="next-button">Next</button>
+      </div></div>
+
+
+    <div id="q-seven" style="display:none">
+      <div>
+        <p class="question-one">7. What is the official currency of Nigeria?</p>
+        <button onclick="saveSelection(7, 'Dollar');" class="option">Dollar</button><br>
+        <button onclick="saveSelection(7, 'Naira');" class="option">Naira</button><br>
+        <button onclick="saveSelection(7, 'Cedi');" class="option">Cedi</button><br>
+        <button onclick="saveSelection(7, 'CFA Franc');" class="option">CFA Franc</button>
+      </div>
+      <div>
+        <button  onclick="
+        document.getElementById('q-six').style['display'] = 'block';
+        document.getElementById('q-seven').style['display'] = 'none'
+        " class="back-button">Back</button>
+        <button onclick="
+        document.getElementById('q-eight').style['display'] = 'block';
+        document.getElementById('q-seven').style['display'] = 'none'
+        "  class="next-button">Next</button>
+      </div></div>
+
+
+    <div id="q-eight" style="display:none">
+      <div>
+        <p class="question-one">8. Which international event did Nigeria recently host in 2023?</p>
+        <button onclick="saveSelection(8, 'African Union Summit');" class="option">African Union Summit</button><br>
+        <button onclick="saveSelection(8, 'ECOWAS Conference');" class="option">ECOWAS Conference</button><br>
+        <button onclick="saveSelection(8, 'African Continental Free Trade Area (AfCFTA) Summit');" class="option">African Continental Free Trade Area (AfCFTA) Summit</button><br>
+        <button onclick="saveSelection(8, 'Commonwealth Games');" class="option">Commonwealth Games</button>
+      </div>
+      <div>
+        <button onclick="
+        document.getElementById('q-seven').style['display'] = 'block';
+        document.getElementById('q-eight').style['display'] = 'none'
+        "  class="back-button">Back</button>
+        <button onclick="
+        document.getElementById('q-nine').style['display'] = 'block';
+        document.getElementById('q-eight').style['display'] = 'none'
+        "  class="next-button">Next</button>
+      </div></div>
+
+
+    <div id="q-nine" style="display:none">
+      <div>
+        <p class="question-one">9. Nigeria's electoral body is known by what acronym?</p>
+        <button onclick="saveSelection(9, 'INEC');" class="option">INEC</button><br>
+        <button onclick="saveSelection(9, 'EFCC');" class="option">EFCC</button><br>
+        <button onclick="saveSelection(9, 'NDLEA<');" class="option">NDLEA</button><br>
+        <button onclick="saveSelection(9, 'NCDC');" class="option">NCDC</button>
+      </div>
+      <div>
+        <button onclick="
+        document.getElementById('q-eight').style['display'] = 'block';
+        document.getElementById('q-nine').style['display'] = 'none'
+        " class="back-button">Back</button>
+        <button onclick="
+        document.getElementById('q-ten').style['display'] = 'block';
+        document.getElementById('q-nine').style['display'] = 'none'
+        " class="next-button">Next</button>
+      </div></div>
+
+
+    <div id="q-ten" style="display:none">
+      <div>
+        <p class="question-one">10. Which Nigerian musician recently won a Grammy Award in 2023?</p>
+        <button onclick="saveSelection(10, 'Wizkid');" class="option">Wizkid</button><br>
+        <button onclick="saveSelection(10, 'Burna Boy');" class="option">Burna Boy</button><br>
+        <button onclick="saveSelection(10, 'Davido');" class="option">Davido</button><br>
+        <button onclick="saveSelection(10, 'Tiwa Savage');" class="option">Tiwa Savage</button>
+      </div>
+      <div>
+        <button onclick="
+        document.getElementById('q-nine').style['display'] = 'block';
+        document.getElementById('q-ten').style['display'] = 'none'
+        " class="back-button">Back</button>
+        <button onclick="submitConfirm();
+        " class="final-submit-button">Submit</button>
+      </div></div>
+    <div id="end-page" style="display:none">
+      <div class="header"><p id="result">Your Score is ${score}</p>
+        <a href="startpage.html"><button class="retake-button">Retake Test</button></a>
+        </div>
+        <div>
+          <img src="2B7515D3-68D4-47AE-BE08-3DF7568A89C2.png">
+        </div></div>
+      
+
+  </body>
+</html>
